@@ -11,7 +11,7 @@ const selectRate = (e) => {
         number.style.backgroundColor = ""
     })
     e.target.style.backgroundColor = 'hsl(217, 12%, 63%)'
-   
+
 }
 
 numbers.forEach(item => {
@@ -19,10 +19,14 @@ numbers.forEach(item => {
 })
 
 const sendRate = () => {
-   console.log( rate)
+    console.log(rate)
+    if(rate === "")return
+   
     ratingState.classList.add("rating-state--hide");
     thx.classList.remove('thx-state--hide')
+
     span.textContent = rate;
+
 }
 
 btn.addEventListener('click', sendRate);
