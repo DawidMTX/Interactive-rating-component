@@ -1,0 +1,130 @@
+@import _variables
+@import _reset
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;500;600;700&display=swap')
+body
+    width: 100vw
+    max-width: 375px
+    background-color: map-get($colors, very-dark-blue)
+
+    .main-container
+        background-color: map-get($colors, dark-blue)
+        width: 87%
+        max-width: 375px
+        min-width: 320px
+        border-radius: 15px
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        padding: 20px 25px
+
+        .rating-state
+            .text
+                &__image
+                    border-radius: 50%
+                    background-color: map-get($colors, medium-gray)
+                    width: 40px
+                    height: 40px
+                    position: relative
+                    margin-top: 4px
+                    margin-left: 1px
+                    .image
+                        position: absolute
+                        width: 15px
+                        top: 50%
+                        left: 50%
+                        transform: translate(-50%, -50%)
+                &__h1
+                    color: map-get($colors, white)
+                    font-size: 1.5rem
+                    font-family: $font
+                    font-weight: 500
+                    margin-top: 20px
+                &__p
+                    color: map-get($colors, light-gray )
+                    font-family: $font
+                    font-weight: 300
+                    font-size: $font-size-p
+                    letter-spacing: .1px
+                    margin-top: 11px
+                    line-height: 22px
+            .rating
+                display: flex
+                justify-content: space-between
+                margin-top: 30px
+                &__number
+                    color: white
+                    width: 42px
+                    height: 42px
+                    background-color: map-get($colors, medium-gray)
+                    border-radius: 50%
+                    align-self: center
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    text-decoration: none
+                    &:hover
+                        background-color: map-get($colors,orange )
+                        color: white
+                        cursor: pointer
+
+            .submit-btn
+                background-color: map-get($colors,orange )
+                border-radius: 20px
+                border: none
+                margin: 20px 0 5px
+                width: 100%
+                height: 45px
+                color: white
+                font-size: 1rem
+                font-family: $font
+                font-weight: 700
+                letter-spacing: .8px
+                text-transform: uppercase
+                text-align: center
+                line-height: 45px
+                &:hover
+                    background-color: white
+                    color: map-get($colors,orange )
+                    cursor: pointer
+            &--hide
+                display: none
+        .thx-state
+            .your-select
+                display: flex
+                flex-wrap: wrap
+                justify-content: center
+                &__image
+                    margin-top:15px
+                &__picture
+                    width: 140px
+                &__number
+                    padding: 0 13px
+                    height: 30px
+                    line-height: 32px
+                    text-align: center
+                    color: map-get($colors,orange )
+                    font-family: $font
+                    font-weight: 400
+                    font-size: $font-size-p
+                    border-radius: 20px
+                    background-color: map-get($colors, medium-gray)
+                    margin-top: 25px
+            .thx
+                display: flex
+                flex-wrap: wrap
+                justify-content: center
+                font-family: $font
+                &__h1
+                    color: hsl(0, 0%, 100, 0.8)
+                    margin-top: 30px
+                    font-size: 1.5rem
+                &__p
+                    color: hsl(0, 0%, 100, 0.5)
+                    font-size: $font-size-p
+                    margin-top: 10px
+                    margin-bottom: 20px
+                    line-height: 22px
+                    text-align: center
+            &--hide
+                display: none
